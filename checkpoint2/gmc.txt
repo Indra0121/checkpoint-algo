@@ -1,0 +1,38 @@
+########task1:
+algorithm gmc;
+function dot_product(t1,t2: table[1..40]:entier):entier;
+var ,i,j,ps:entier 
+debut 
+ps:=0;
+pour i de 1 a lenght(t1)et pour j de 1 a lenght(t2) faire
+ps=ps+t1[i]*t2[j];
+fin pour;
+fin;
+procedure ortogonal(t1[1..40,1..40]:entier,t2[1..40,1..40]:entier;bool:boolean);
+var p:entier 
+p:= product_dot(t1,t2);
+si p=0 alors 
+bool:=vrai;
+sinon
+bool:= faux;
+finsi;
+fin;
+fin.
+
+
+#########task2:
+algorithm 
+
+
+procedure insertion(t:table[1..40]entier,n:entier); 
+    si n > 0 alors
+        insertion(A, n-1)
+        x ← t[n]
+        j ← n-1
+        tant que j >= 0 et t[j] > x faire
+            t[j+1] ← t[j]
+            j ← j-1
+        fin tq;
+        t[j+1] ← x
+    finsi;
+fin;
